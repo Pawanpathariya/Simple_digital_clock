@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <div id="clock">
+        <div id="hour"></div>:
+        <div id="mine"></div>:
+        <div id="sece"></div>
+        <div id="tim"></div>
+    </div>
+    <script> 
+    function time(){
+       const d=new Date;
+       let tm;
+       const ho=d.getHours();
+       const min=d.getMinutes();
+       const sec=d.getSeconds();
+       const mon=d.getMonth();
+       if(ho>12){
+       hou=ho-12;
+       tm="PM";
+       }
+       else{
+        hou=ho;
+        tm="AM";
+       }
+    document.getElementById("hour").innerHTML=hou;
+    document.getElementById("mine").innerHTML=min;
+    document.getElementById("sece").innerHTML=sec;
+    document.getElementById("tim").innerHTML=tm;
+
+    }
+    setInterval(time,100);
+    </script>
+</body>
+</html>
